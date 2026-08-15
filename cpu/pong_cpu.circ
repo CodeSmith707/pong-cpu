@@ -584,10 +584,93 @@
     <wire from="(640,140)" to="(690,140)"/>
     <wire from="(640,290)" to="(680,290)"/>
   </circuit>
-  <circuit name="DFlipFlop">
+  <circuit name="SRLatch">
     <a name="appearance" val="logisim_evolution"/>
-    <a name="circuit" val="DFlipFlop"/>
+    <a name="circuit" val="SRLatch"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(170,120)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="R"/>
+    </comp>
+    <comp lib="0" loc="(170,260)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="S"/>
+    </comp>
+    <comp lib="0" loc="(560,140)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Q"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(560,240)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="NotQ"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="1" loc="(430,240)" name="NOR Gate"/>
+    <comp lib="1" loc="(440,140)" name="NOR Gate"/>
+    <wire from="(170,120)" to="(380,120)"/>
+    <wire from="(170,260)" to="(370,260)"/>
+    <wire from="(320,160)" to="(320,180)"/>
+    <wire from="(320,160)" to="(380,160)"/>
+    <wire from="(320,180)" to="(470,180)"/>
+    <wire from="(320,200)" to="(320,220)"/>
+    <wire from="(320,200)" to="(500,200)"/>
+    <wire from="(320,220)" to="(370,220)"/>
+    <wire from="(430,240)" to="(470,240)"/>
+    <wire from="(440,140)" to="(500,140)"/>
+    <wire from="(470,180)" to="(470,240)"/>
+    <wire from="(470,240)" to="(560,240)"/>
+    <wire from="(500,140)" to="(500,200)"/>
+    <wire from="(500,140)" to="(560,140)"/>
+  </circuit>
+  <circuit name="DLatchEN">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="DLatchEN"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(1010,290)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="VALUE"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(120,270)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="D"/>
+    </comp>
+    <comp lib="0" loc="(120,360)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="EN"/>
+    </comp>
+    <comp lib="1" loc="(230,300)" name="NOT Gate"/>
+    <comp lib="1" loc="(430,260)" name="AND Gate"/>
+    <comp lib="1" loc="(430,370)" name="AND Gate"/>
+    <comp loc="(930,290)" name="SRLatch"/>
+    <wire from="(120,270)" to="(170,270)"/>
+    <wire from="(120,360)" to="(350,360)"/>
+    <wire from="(170,270)" to="(170,300)"/>
+    <wire from="(170,270)" to="(360,270)"/>
+    <wire from="(170,300)" to="(200,300)"/>
+    <wire from="(230,300)" to="(290,300)"/>
+    <wire from="(290,300)" to="(290,390)"/>
+    <wire from="(290,390)" to="(380,390)"/>
+    <wire from="(350,290)" to="(350,350)"/>
+    <wire from="(350,290)" to="(370,290)"/>
+    <wire from="(350,350)" to="(350,360)"/>
+    <wire from="(350,350)" to="(380,350)"/>
+    <wire from="(360,240)" to="(360,270)"/>
+    <wire from="(360,240)" to="(380,240)"/>
+    <wire from="(370,280)" to="(370,290)"/>
+    <wire from="(370,280)" to="(380,280)"/>
+    <wire from="(430,260)" to="(460,260)"/>
+    <wire from="(430,370)" to="(680,370)"/>
+    <wire from="(460,260)" to="(460,310)"/>
+    <wire from="(460,310)" to="(710,310)"/>
+    <wire from="(680,290)" to="(680,370)"/>
+    <wire from="(680,290)" to="(710,290)"/>
+    <wire from="(930,290)" to="(1010,290)"/>
   </circuit>
 </project>
