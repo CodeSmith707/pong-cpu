@@ -1260,6 +1260,25 @@
     <comp lib="0" loc="(360,400)" name="Clock">
       <a name="appearance" val="NewPins"/>
     </comp>
+    <comp lib="0" loc="(600,120)" name="Splitter">
+      <a name="facing" val="south"/>
+      <a name="fanout" val="4"/>
+      <a name="incoming" val="4"/>
+    </comp>
+    <comp lib="0" loc="(630,90)" name="Splitter">
+      <a name="fanout" val="4"/>
+      <a name="incoming" val="4"/>
+    </comp>
+    <comp lib="0" loc="(640,210)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="B3"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(690,30)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="A3"/>
+      <a name="type" val="output"/>
+    </comp>
     <comp lib="0" loc="(750,190)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="label" val="OPCODE"/>
@@ -1303,10 +1322,87 @@
     <wire from="(340,210)" to="(370,210)"/>
     <wire from="(360,170)" to="(360,400)"/>
     <wire from="(360,170)" to="(370,170)"/>
-    <wire from="(590,110)" to="(810,110)"/>
-    <wire from="(590,90)" to="(810,90)"/>
+    <wire from="(590,110)" to="(600,110)"/>
+    <wire from="(590,90)" to="(630,90)"/>
+    <wire from="(600,110)" to="(600,120)"/>
+    <wire from="(600,110)" to="(810,110)"/>
+    <wire from="(610,140)" to="(610,170)"/>
+    <wire from="(610,170)" to="(650,170)"/>
+    <wire from="(630,90)" to="(810,90)"/>
+    <wire from="(640,210)" to="(650,210)"/>
+    <wire from="(650,170)" to="(650,210)"/>
+    <wire from="(650,80)" to="(700,80)"/>
+    <wire from="(690,30)" to="(700,30)"/>
+    <wire from="(700,30)" to="(700,80)"/>
     <wire from="(750,190)" to="(780,190)"/>
     <wire from="(780,130)" to="(780,190)"/>
     <wire from="(780,130)" to="(810,130)"/>
+  </circuit>
+  <circuit name="Flags">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="Flags"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(160,220)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="ALU_Res"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(220,220)" name="Splitter">
+      <a name="fanout" val="4"/>
+      <a name="incoming" val="4"/>
+    </comp>
+    <comp lib="0" loc="(240,120)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="ALU_COUT"/>
+    </comp>
+    <comp lib="0" loc="(390,120)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="C"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(550,360)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="N"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(690,200)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Z"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(770,360)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="V"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="1" loc="(390,280)" name="OR Gate"/>
+    <comp lib="1" loc="(470,260)" name="OR Gate"/>
+    <comp lib="1" loc="(570,200)" name="OR Gate"/>
+    <comp lib="1" loc="(650,200)" name="NOT Gate"/>
+    <wire from="(160,220)" to="(220,220)"/>
+    <wire from="(240,120)" to="(390,120)"/>
+    <wire from="(240,180)" to="(520,180)"/>
+    <wire from="(240,190)" to="(330,190)"/>
+    <wire from="(240,200)" to="(300,200)"/>
+    <wire from="(240,210)" to="(260,210)"/>
+    <wire from="(260,210)" to="(260,300)"/>
+    <wire from="(260,300)" to="(260,360)"/>
+    <wire from="(260,300)" to="(340,300)"/>
+    <wire from="(260,360)" to="(550,360)"/>
+    <wire from="(300,200)" to="(300,260)"/>
+    <wire from="(300,260)" to="(340,260)"/>
+    <wire from="(330,190)" to="(330,240)"/>
+    <wire from="(330,240)" to="(420,240)"/>
+    <wire from="(390,280)" to="(420,280)"/>
+    <wire from="(470,260)" to="(510,260)"/>
+    <wire from="(510,220)" to="(510,260)"/>
+    <wire from="(510,220)" to="(520,220)"/>
+    <wire from="(570,200)" to="(620,200)"/>
+    <wire from="(650,200)" to="(690,200)"/>
   </circuit>
 </project>
